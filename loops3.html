@@ -84,6 +84,13 @@
 /* const leapYears = function (leapYear) {
     return (leapYear % 4 === 0 &&  (leapYear % 100 != 0 || leapYear % 400 === 0));
 } */
+
+const ftoc = function (fahTemp) {
+  let celsiusTemp = ((fahTemp - 32) * (5 / 9));
+  celsiusTemp % 1 != 0 ? celsiusTemp = celsiusTemp.toFixed(1) : celsiusTemp;
+  return celsiusTemp;
+};
+
 </script>
 
 </html>
