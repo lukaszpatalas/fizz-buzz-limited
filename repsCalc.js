@@ -1,7 +1,6 @@
 function repsCalculator(max, cycle, bigPerc) {
     if (cycle >= 1 && cycle <= 4) {
         const fiveRep = max * 0.87;
-        const result = "";
         warmUpSets(fiveRep);
         heavySets(max, cycle);
         lastSets(max, cycle, bigPerc);
