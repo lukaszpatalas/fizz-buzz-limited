@@ -20,6 +20,11 @@ const div = document.createElement('div');
 div.style.borderColor = 'black';
 div.style.backgroundColor = 'pink';
 
+const header1 = document.createElement('h1');
+header1.textContent = 'I am in a div';
+
+
+
 container.appendChild(paragraph);
 container.appendChild(header3);
 container.appendChild(div);
