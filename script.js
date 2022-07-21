@@ -23,8 +23,11 @@ div.style.backgroundColor = 'pink';
 const header1 = document.createElement('h1');
 header1.textContent = 'I am in a div';
 
-
+const paragraph2 = document.createElement('p');
+paragraph2.textContent = "ME TOO!";
 
 container.appendChild(paragraph1);
 container.appendChild(header3);
+div.appendChild(header1);
+div.appendChild(paragraph2);
 container.appendChild(div);
