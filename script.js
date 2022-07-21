@@ -6,3 +6,11 @@ content.textContent = 'This is the glorious text-content!';
 
 container.appendChild(content); */
 
+const container = document.querySelector('#container');
+
+const paragraph = document.createElement('p');
+paragraph.style.color = 'red';
+paragraph.textContent = 'Hey I`m red!';
+
+
+container.appendChild(paragraph);
