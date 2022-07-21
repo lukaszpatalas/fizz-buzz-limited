@@ -4,6 +4,8 @@ function repsCalculator(max, cycle, bigPerc) {
         warmUpSets(fiveRep);
         heavySets(max, cycle);
         lastSets(max, cycle, bigPerc);
+    } else if (cycle === 5) {
+        sickSets(max);
     } else {
         console.log("Sorry, please cycle number between 1 and 4 inclusive.");
     }
@@ -29,6 +31,14 @@ function heavySets(maxRep, cycleNo) {
         console.log(`Heavy Set 2: ${Math.round((maxRep * 0.85) / 2.5) * 2.5} kg * 5`);
         console.log(`Heavy Set 3: ${Math.round((maxRep * 0.95) / 2.5) * 2.5} kg * 5`);
     }
+}
+
+function sickSets(maxRep) {
+    console.log(`Sick Set 1: ${Math.round((maxRep * 0.45) / 2.5) * 2.5} kg * 5`);
+    console.log(`Sick Set 2: ${Math.round((maxRep * 0.55) / 2.5) * 2.5} kg * 5`);
+    console.log(`Sick Set 3: ${Math.round((maxRep * 0.65) / 2.5) * 2.5} kg * 5`);
+    console.log(`Sick Set 4: ${Math.round((maxRep * 0.75) / 2.5) * 2.5} kg * 5`);
+    console.log(`Sick Set 5: ${Math.round((maxRep * 0.85) / 2.5) * 2.5} kg * 5`);
 }
 
 function lastSets(maxRep, cycleNo, biggerPerc) {
