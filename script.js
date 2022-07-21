@@ -8,9 +8,9 @@ container.appendChild(content); */
 
 const container = document.querySelector('#container');
 
-const paragraph = document.createElement('p');
-paragraph.style.color = 'red';
-paragraph.textContent = 'Hey I`m red!';
+const paragraph1 = document.createElement('p');
+paragraph1.style.color = 'red';
+paragraph1.textContent = 'Hey I`m red!';
 
 const header3 = document.createElement('h3');
 header3.style.color = 'blue';
@@ -25,6 +25,6 @@ header1.textContent = 'I am in a div';
 
 
 
-container.appendChild(paragraph);
+container.appendChild(paragraph1);
 container.appendChild(header3);
 container.appendChild(div);
