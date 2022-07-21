@@ -16,6 +16,10 @@ const header3 = document.createElement('h3');
 header3.style.color = 'blue';
 header3.textContent = 'I am a blue h3!';
 
+const div = document.createElement('div');
+div.style.borderColor = 'black';
+div.style.backgroundColor = 'pink';
 
 container.appendChild(paragraph);
 container.appendChild(header3);
+container.appendChild(div);
