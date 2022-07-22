@@ -31,3 +31,11 @@ container.appendChild(header3);
 div.appendChild(header1);
 div.appendChild(paragraph2);
 container.appendChild(div);
+
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert("Hello World");
+
+const button = document.querySelector('#button');
+button.addEventListener('click', () => {
+    alert("Hello World");
+});
