@@ -7,7 +7,7 @@ function repsCalculator(max, cycle, bigPerc) {
     } else if (cycle === 5) {
         sickSets(max);
     } else {
-        console.log("Sorry, please cycle number between 1 and 4 inclusive.");
+        console.log("Sorry, please cycle number between 1 and 5 inclusive.");
     }
 }
 

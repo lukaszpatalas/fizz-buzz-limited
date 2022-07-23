@@ -6,7 +6,7 @@ content.textContent = 'This is the glorious text-content!';
 
 container.appendChild(content); */
 
-const container = document.querySelector('#container');
+/* const container = document.querySelector('#container');
 
 const paragraph1 = document.createElement('p');
 paragraph1.style.color = 'red';
@@ -32,10 +32,12 @@ div.appendChild(header1);
 div.appendChild(paragraph2);
 container.appendChild(div);
 
-const btn = document.querySelector('#btn');
-btn.onclick = () => alert("Hello World");
+ */
 
-const button = document.querySelector('#button');
-button.addEventListener('click', () => {
-    alert("Hello World");
-});
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+    })
+})
