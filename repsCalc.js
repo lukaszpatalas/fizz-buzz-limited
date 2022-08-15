@@ -1,4 +1,21 @@
-function lastSetLast(max, cycle) {
+function firstSetLast(max, cycle) {
+    if (cycle >= 1 && cycle <= 4) {
+        const fiveRep = max * 0.87;
+        warmUpSets(fiveRep);
+        firstHeavySets(max, cycle);
+        firstLastSets(max, cycle);
+    } else if (cycle === 5) {
+        sickSets(max);
+    } else {
+        console.log("Sorry, please cycle number between 1 and 5 inclusive.");
+    }
+}
+
+function firstHeavySets(max, cycle) {
+
+}
+
+function firstLastSets(max, cycle) {
     
 }
 
@@ -6,8 +23,8 @@ function boringButBig(max, cycle, bigPerc) {
     if (cycle >= 1 && cycle <= 4) {
         const fiveRep = max * 0.87;
         warmUpSets(fiveRep);
-        heavySets(max, cycle);
-        lastSets(max, cycle, bigPerc);
+        boringHeavySets(max, cycle);
+        boringSets(max, cycle, bigPerc);
     } else if (cycle === 5) {
         sickSets(max);
     } else {
@@ -21,7 +38,7 @@ function warmUpSets(fiveRepMax) {
     console.log(`Warm up Set 3: ${Math.round((fiveRepMax * 0.6) / 2.5) * 2.5} kg * 3`);
 }
 
-function heavySets(maxRep, cycleNo) {
+function boringHeavySets(maxRep, cycleNo) {
     if (cycleNo === 1 || cycleNo === 4) {
         console.log(`Heavy Set 1: ${Math.round((maxRep * 0.7) / 2.5) * 2.5} kg * 5`);
         console.log(`Heavy Set 2: ${Math.round((maxRep * 0.8) / 2.5) * 2.5} kg * 5`);
@@ -45,7 +62,7 @@ function sickSets(maxRep) {
     console.log(`Sick Set 5: ${Math.round((maxRep * 0.85) / 2.5) * 2.5} kg * 5`);
 }
 
-function lastSets(maxRep, cycleNo, biggerPerc) {
+function boringSets(maxRep, cycleNo, biggerPerc) {
     if (cycleNo === 1) {
         if (biggerPerc === true) {
             console.log(`BBB Set 1-5: ${Math.round((maxRep * 0.6) / 2.5) * 2.5} kg * 10`);
