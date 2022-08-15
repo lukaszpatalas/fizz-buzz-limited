@@ -1,4 +1,8 @@
-function repsCalculator(max, cycle, bigPerc) {
+function lastSetLast(max, cycle) {
+    
+}
+
+function boringButBig(max, cycle, bigPerc) {
     if (cycle >= 1 && cycle <= 4) {
         const fiveRep = max * 0.87;
         warmUpSets(fiveRep);
