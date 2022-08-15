@@ -33,13 +33,13 @@ function firstHeavySets(max, cycle) {
 
 function firstLastSets(max, cycle) {
     if (cycleNo === 1) {
-        console.log(`BBB Set 1-5: ${Math.round((maxRep * 0.6) / 2.5) * 2.5} kg * 10`);
+        console.log(`BBB Set 1-5: ${Math.round((max * 0.6) / 2.5) * 2.5} kg * 10`);
     } else if (cycleNo === 2) {
-        console.log(`BBB Set 1-5: ${Math.round((maxRep * 0.5) / 2.5) * 2.5} kg * 10`);
+        console.log(`BBB Set 1-5: ${Math.round((max * 0.5) / 2.5) * 2.5} kg * 10`);
     } else if (cycleNo === 3) {
-        console.log(`BBB Set 1-5: ${Math.round((maxRep * 0.7) / 2.5) * 2.5} kg * 10`);
+        console.log(`BBB Set 1-5: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 10`);
     } else if (cycleNo === 4) {
-        console.log(`PR Set: ${Math.round(maxRep / 2.5) * 2.5} kg * 3-5`);
+        console.log(`PR Set: ${Math.round(max / 2.5) * 2.5} kg * 3-5`);
     }
 }
 
