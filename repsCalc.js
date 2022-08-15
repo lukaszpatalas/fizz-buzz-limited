@@ -12,15 +12,15 @@ function firstSetLast(max, cycle) {
 }
 
 function firstHeavySets(max, cycle) {
-    if (cycleNo === 1) {
+    if (cycle === 1) {
         console.log(`Heavy Set 1: ${Math.round((max * 0.65) / 2.5) * 2.5} kg * 5`)
         console.log(`Heavy Set 2: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 5`);
         console.log(`Heavy Set 3: ${Math.round((max * 0.85) / 2.5) * 2.5} kg * 5`);
-    } else if (cycleNo === 2) {
+    } else if (cycle === 2) {
         console.log(`Heavy Set 1: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 3`);
         console.log(`Heavy Set 2: ${Math.round((max * 0.8) / 2.5) * 2.5} kg * 3`);
         console.log(`Heavy Set 3: ${Math.round((max * 0.9) / 2.5) * 2.5} kg * 3`);
-    } else if (cycleNo === 3) {
+    } else if (cycle === 3) {
         console.log(`Heavy Set 1: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 5`);
         console.log(`Heavy Set 2: ${Math.round((max * 0.85) / 2.5) * 2.5} kg * 3`);
         console.log(`Heavy Set 3: ${Math.round((max * 0.95) / 2.5) * 2.5} kg * 1`);
@@ -32,14 +32,14 @@ function firstHeavySets(max, cycle) {
 }
 
 function firstLastSets(max, cycle) {
-    if (cycleNo === 1) {
-        console.log(`BBB Set 1-5: ${Math.round((max * 0.6) / 2.5) * 2.5} kg * 10`);
-    } else if (cycleNo === 2) {
-        console.log(`BBB Set 1-5: ${Math.round((max * 0.5) / 2.5) * 2.5} kg * 10`);
-    } else if (cycleNo === 3) {
-        console.log(`BBB Set 1-5: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 10`);
-    } else if (cycleNo === 4) {
-        console.log(`PR Set: ${Math.round(max / 2.5) * 2.5} kg * 3-5`);
+    if (cycle === 1) {
+        console.log(`FSL Set 1-5: ${Math.round((max * 0.65) / 2.5) * 2.5} kg * 5`);
+    } else if (cycle === 2) {
+        console.log(`FSL Set 1-5: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 5`);
+    } else if (cycle === 3) {
+        console.log(`FSL Set 1-5: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 5`);
+    } else if (cycle === 4) {
+        console.log(`Deload Set: ${Math.round(max / 2.5) * 2.5} kg * 1`);
     }
 }
 
