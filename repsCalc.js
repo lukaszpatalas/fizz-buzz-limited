@@ -12,11 +12,27 @@ function firstSetLast(max, cycle) {
 }
 
 function firstHeavySets(max, cycle) {
-
+    if (cycleNo === 1) {
+        console.log(`Heavy Set 1: ${Math.round((maxRep * 0.65) / 2.5) * 2.5} kg * 5`)
+        console.log(`Heavy Set 2: ${Math.round((maxRep * 0.75) / 2.5) * 2.5} kg * 5`);
+        console.log(`Heavy Set 3: ${Math.round((maxRep * 0.85) / 2.5) * 2.5} kg * 5`);
+    } else if (cycleNo === 2) {
+        console.log(`Heavy Set 1: ${Math.round((maxRep * 0.7) / 2.5) * 2.5} kg * 3`);
+        console.log(`Heavy Set 2: ${Math.round((maxRep * 0.8) / 2.5) * 2.5} kg * 3`);
+        console.log(`Heavy Set 3: ${Math.round((maxRep * 0.9) / 2.5) * 2.5} kg * 3`);
+    } else if (cycleNo === 3) {
+        console.log(`Heavy Set 1: ${Math.round((maxRep * 0.75) / 2.5) * 2.5} kg * 5`);
+        console.log(`Heavy Set 2: ${Math.round((maxRep * 0.85) / 2.5) * 2.5} kg * 3`);
+        console.log(`Heavy Set 3: ${Math.round((maxRep * 0.95) / 2.5) * 2.5} kg * 1`);
+    } else if (cycle === 4) {
+        console.log(`Heavy Set 1: ${Math.round((maxRep * 0.7) / 2.5) * 2.5} kg * 5`);
+        console.log(`Heavy Set 2: ${Math.round((maxRep * 0.8) / 2.5) * 2.5} kg * 3`);
+        console.log(`Heavy Set 3: ${Math.round((maxRep * 0.9) / 2.5) * 2.5} kg * 1`);
+    }
 }
 
 function firstLastSets(max, cycle) {
-    
+
 }
 
 function boringButBig(max, cycle, bigPerc) {
