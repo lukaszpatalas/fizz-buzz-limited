@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8"/>
+
+<head>
+    <meta charset="utf-8" />
     <title>Object basics: Task 2</title>
     <style>
-      p {
-        color: purple;
-        margin: 0.5em 0;
-      }
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
 
-      * {
-        box-sizing: border-box;
-      }
+        * {
+            box-sizing: border-box;
+        }
     </style>
     <link rel="stylesheet" href="../styles.css" />
-  </head>
+</head>
 
-  <body>
+<body>
 
     <section class="preview">
 
@@ -24,19 +25,57 @@
 
     </section>
 
-  </body>
-  <script>
+</body>
+<script>
     let bandInfo;
 
     // Add your code here
+    bandInfo = {
+        name: "The Prodigy",
+        nationality: "British",
+        genre: "Electronic Dance",
+        members: 3,
+        formed: 1990,
+        split: false,
+        albums: [
+            {
+                name: "Experience",
+                released: 1992,
+            },
+            {
+                name: "Music for the Jilted Generation",
+                released: 1994,
+            },
+            {
+                name: "The Fat of the Land",
+                released: 1997,
+            },
+            {
+                name: "Always outnumbered, Never Outgunned",
+                released: 2004,
+            },
+            {
+                name: "Invaders Must Die",
+                released: 2009,
+            },
+            {
+                name: "The Day Is My Enemy",
+                released: 2015,
+            },
+            {
+                name: "No Tourists",
+                released: 2018,
+            },
+        ]
+    }
 
-
+    console.log(`Band info: ${bandInfo["name"]}. My favourite album is ${bandInfo["albums"][0]["name"]}`);
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
     let para1 = document.createElement('p');
     para1.textContent = bandInfo;
     section.appendChild(para1);
-  </script>
+</script>
 
 </html>
