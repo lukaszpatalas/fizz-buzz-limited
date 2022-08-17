@@ -1,3 +1,5 @@
+const programs = ["Boring But Big", "Last Set Last"];
+
 function firstSetLast(max, cycle) {
     if (cycle >= 1 && cycle <= 4) {
         const fiveRep = max * 0.87;
