@@ -1,5 +1,3 @@
-const programs = ["Boring But Big", "Last Set Last"];
-
 function startTraining(max, cycle, program, bigPerc) {
     if (cycle >= 1 && cycle <= 4) {
         const fiveRep = max * 0.87;
