@@ -1,24 +1,21 @@
 const programs = ["Boring But Big", "Last Set Last"];
 
-function firstSetLast(max, cycle) {
+function startTraining(max, cycle, program, bigPerc) {
     if (cycle >= 1 && cycle <= 4) {
         const fiveRep = max * 0.87;
         warmUpSets(fiveRep);
-        firstHeavySets(max, cycle);
-        firstLastSets(max, cycle);
-    } else if (cycle === 5) {
-        sickSets(max);
-    } else {
-        console.log("Sorry, please cycle number between 1 and 5 inclusive.");
-    }
-}
-
-function boringButBig(max, cycle, bigPerc) {
-    if (cycle >= 1 && cycle <= 4) {
-        const fiveRep = max * 0.87;
-        warmUpSets(fiveRep);
-        boringHeavySets(max, cycle);
-        boringSets(max, cycle, bigPerc);
+        switch (program) {
+            case 0:
+                boringHeavySets(max, cycle);
+                boringSets(max, cycle, bigPerc);
+                break;
+            case 1:
+                firstHeavySets(max, cycle);
+                firstLastSets(max, cycle);
+                break;
+            default:
+                console.log("Wrong program!");
+        }
     } else if (cycle === 5) {
         sickSets(max);
     } else {
