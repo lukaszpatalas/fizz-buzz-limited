@@ -11,6 +11,19 @@ function firstSetLast(max, cycle) {
     }
 }
 
+function boringButBig(max, cycle, bigPerc) {
+    if (cycle >= 1 && cycle <= 4) {
+        const fiveRep = max * 0.87;
+        warmUpSets(fiveRep);
+        boringHeavySets(max, cycle);
+        boringSets(max, cycle, bigPerc);
+    } else if (cycle === 5) {
+        sickSets(max);
+    } else {
+        console.log("Sorry, please cycle number between 1 and 5 inclusive.");
+    }
+}
+
 function firstHeavySets(max, cycle) {
     if (cycle === 1) {
         console.log(`Heavy Set 1: ${Math.round((max * 0.65) / 2.5) * 2.5} kg * 5`)
@@ -40,19 +53,6 @@ function firstLastSets(max, cycle) {
         console.log(`FSL Set 1-5: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 5`);
     } else if (cycle === 4) {
         console.log(`Deload Set: ${Math.round(max / 2.5) * 2.5} kg * 1`);
-    }
-}
-
-function boringButBig(max, cycle, bigPerc) {
-    if (cycle >= 1 && cycle <= 4) {
-        const fiveRep = max * 0.87;
-        warmUpSets(fiveRep);
-        boringHeavySets(max, cycle);
-        boringSets(max, cycle, bigPerc);
-    } else if (cycle === 5) {
-        sickSets(max);
-    } else {
-        console.log("Sorry, please cycle number between 1 and 5 inclusive.");
     }
 }
 
