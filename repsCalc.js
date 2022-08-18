@@ -9,7 +9,11 @@ function startTraining(max, cycle, program, bigPerc, widowmaker) {
                 break;
             case 1:
                 firstHeavySets(max, cycle);
-                firstLastSets(max, cycle);
+                if (widowmaker) {
+                    widowmakerSets(max, cycle);
+                } else {
+                    firstLastSets(max, cycle);
+                }
                 break;
             default:
                 console.log("Wrong program!");
