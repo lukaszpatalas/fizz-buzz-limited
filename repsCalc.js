@@ -1,4 +1,4 @@
-function startTraining(max, cycle, program, bigPerc) {
+function startTraining(max, cycle, program, bigPerc, widowmaker) {
     if (cycle >= 1 && cycle <= 4) {
         const fiveRep = max * 0.87;
         warmUpSets(fiveRep);
@@ -48,6 +48,18 @@ function firstLastSets(max, cycle) {
         console.log(`FSL Set 1-5: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 5`);
     } else if (cycle === 3) {
         console.log(`FSL Set 1-5: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 5`);
+    } else if (cycle === 4) {
+        console.log(`Deload Set: ${Math.round(max / 2.5) * 2.5} kg * 1`);
+    }
+}
+
+function widowmakerSets(max, cycle) {
+    if (cycle === 1) {
+        console.log(`Widowmaker set: ${Math.round((max * 0.65) / 2.5) * 2.5} kg * 20`);
+    } else if (cycle === 2) {
+        console.log(`Widowmaker set: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 20`);
+    } else if (cycle === 3) {
+        console.log(`Widowmaker set: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 20`);
     } else if (cycle === 4) {
         console.log(`Deload Set: ${Math.round(max / 2.5) * 2.5} kg * 1`);
     }
