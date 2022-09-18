@@ -1,5 +1,5 @@
 function startTraining(max, cycle, program, bigPerc, widowmaker) {
-    if (cycle >= 1 && cycle <= 4) {
+    if (cycle >= 1 && cycle <= 5) {
         const fiveRep = max * 0.87;
         warmUpSets(fiveRep);
         switch (program) {
@@ -18,7 +18,7 @@ function startTraining(max, cycle, program, bigPerc, widowmaker) {
             default:
                 console.log("Wrong program!");
         }
-    } else if (cycle === 5) {
+    } else if (cycle === 6) {
         sickSets(max);
     } else {
         console.log("Sorry, please cycle number between 1 and 5 inclusive.");
@@ -42,6 +42,10 @@ function firstHeavySets(max, cycle) {
         console.log(`Heavy Set 1: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 5`);
         console.log(`Heavy Set 2: ${Math.round((max * 0.8) / 2.5) * 2.5} kg * 3`);
         console.log(`Heavy Set 3: ${Math.round((max * 0.9) / 2.5) * 2.5} kg * 1`);
+    } else if (cycle === 5) {
+        console.log(`Heavy Set 1: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 5`);
+        console.log(`Heavy Set 2: ${Math.round((max * 0.8) / 2.5) * 2.5} kg * 5`);
+        console.log(`Heavy Set 3: ${Math.round((max * 0.9) / 2.5) * 2.5} kg * 1`);
     }
 }
 
@@ -53,6 +57,8 @@ function firstLastSets(max, cycle) {
     } else if (cycle === 3) {
         console.log(`FSL Set 1-5: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 5`);
     } else if (cycle === 4) {
+        console.log(`PR Set: ${Math.round(max / 2.5) * 2.5} kg * 3-5`);
+    } else if (cycle === 5) {
         console.log(`Deload Set: ${Math.round(max / 2.5) * 2.5} kg * 1`);
     }
 }
@@ -65,6 +71,8 @@ function widowmakerSets(max, cycle) {
     } else if (cycle === 3) {
         console.log(`Widowmaker set: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 20`);
     } else if (cycle === 4) {
+        console.log(`PR Set: ${Math.round(max / 2.5) * 2.5} kg * 3-5`);
+    } else if (cycle === 5) {
         console.log(`Deload Set: ${Math.round(max / 2.5) * 2.5} kg * 1`);
     }
 }
