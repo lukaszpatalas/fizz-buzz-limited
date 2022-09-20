@@ -21,7 +21,7 @@ function startTraining(max, cycle, program, bigPerc, widowmaker) {
     } else if (cycle === 6) {
         sickSets(max);
     } else {
-        console.log("Sorry, please cycle number between 1 and 5 inclusive.");
+        console.log("Sorry, please enter cycle number between 1 and 5 inclusive.");
     }
 }
 
