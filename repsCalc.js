@@ -45,7 +45,7 @@ function firstHeavySets(max, cycle) {
     } else if (cycle === 5) {
         console.log(`Heavy Set 1: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 5`);
         console.log(`Heavy Set 2: ${Math.round((max * 0.8) / 2.5) * 2.5} kg * 5`);
-        console.log(`Heavy Set 3: ${Math.round((max * 0.9) / 2.5) * 2.5} kg * 1`);
+        console.log(`Heavy Set 3: ${Math.round((max * 0.9) / 2.5) * 2.5} kg * 1-3`);
     }
 }
 
