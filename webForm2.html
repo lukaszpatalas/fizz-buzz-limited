@@ -7,17 +7,21 @@
     <title>Postcard example</title>
     <style>
         @font-face {
-            font-family: "handwriting";
-            src: url("fonts/journal-webfont.woff2") format("woff2"), url("fonts/journal-webfont.woff") format("woff");
+            font-family: 'journalregular';
+            src: url('fonts/journal-webfont.woff2') format('woff2'),
+                url('fonts/journal-webfont.woff') format('woff');
             font-weight: normal;
             font-style: normal;
+
         }
 
         @font-face {
-            font-family: "typewriter";
-            src: url("fonts/momt___-webfont.woff2") format("woff2"), url("fonts/momt___-webfont.woff") format("woff");
+            font-family: 'momstypewriterregular';
+            src: url('fonts/momot___-webfont.woff2') format('woff2'),
+                url('fonts/momot___-webfont.woff') format('woff');
             font-weight: normal;
             font-style: normal;
+
         }
 
         body {
@@ -41,6 +45,40 @@
             grid-gap: 20px;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 10em 1em 1em 1em;
+        }
+
+        h1 {
+            font: 1em "momstypewriterregular", monospace;
+            align-self: end;
+        }
+
+        #message {
+            grid-row: 1 / 5;
+        }
+
+        #from,
+        #reply {
+            display: flex;
+        }
+
+        label {
+            font: 0.8em "momstypewriterregular", sans-serif;
+        }
+
+        input,
+        textarea {
+            font: 1.4em/1.5em "journalregular", cursive, sans-serif;
+            border: none;
+            padding: 0 10px;
+            margin: 0;
+            width: 80%;
+            background: none;
+        }
+
+        input:focus,
+        textarea:focus {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
         }
     </style>
 </head>
