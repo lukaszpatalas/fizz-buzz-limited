@@ -20,7 +20,7 @@ function startTraining(max, cycle, program, bigPerc, widowmaker) {
                 originalFirstSetLast(max, cycle);
                 break;
             default:
-                console.log("Wrong program!");
+                console.log("No program chosen.");
         }
     } else if (cycle === 6) {
         sickSets(max);
