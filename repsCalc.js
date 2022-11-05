@@ -93,11 +93,11 @@ function firstHeavySets(max, cycle) {
 
 function firstLastSets(max, cycle) {
     if (cycle === 1) {
-        console.log(`FSL Set 1-5: ${Math.round((max * 0.65) / 2.5) * 2.5} kg * 5`);
+        console.log(`FSL Set 1-3: ${Math.round((max * 0.65) / 2.5) * 2.5} kg * 5`);
     } else if (cycle === 2) {
-        console.log(`FSL Set 1-5: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 5`);
+        console.log(`FSL Set 1-3: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 5`);
     } else if (cycle === 3) {
-        console.log(`FSL Set 1-5: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 5`);
+        console.log(`FSL Set 1-3: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 5`);
     } else if (cycle === 4) {
         console.log(`PR Set: ${Math.round(max / 2.5) * 2.5} kg * 3-5`);
     } else if (cycle === 5) {
