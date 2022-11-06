@@ -5,7 +5,7 @@ function startTraining(max, cycle, program, bigPerc, widowmaker) {
         switch (program) {
             case 0:
                 boringHeavySets(max, cycle);
-                boringSets(max, cycle, bigPerc);
+                slightlyLessBoringSets(max, cycle, bigPerc);
                 break;
             case 1:
                 firstHeavySets(max, cycle);
@@ -149,24 +149,24 @@ function sickSets(max) {
     console.log(`Sick Set 5: ${Math.round((max * 0.85) / 2.5) * 2.5} kg * 5`);
 }
 
-function boringSets(max, cycle, biggerPerc) {
+function slightlyLessBoringSets(max, cycle, biggerPerc) {
     if (cycle === 1) {
         if (biggerPerc === true) {
-            console.log(`BBB Set 1-5: ${Math.round((max * 0.6) / 2.5) * 2.5} kg * 10`);
+            console.log(`BBB Set 1-3: ${Math.round((max * 0.6) / 2.5) * 2.5} kg * 10`);
         } else {
-            console.log(`BBB Set 1-5: ${Math.round((max * 0.5) / 2.5) * 2.5} kg * 10`);
+            console.log(`BBB Set 1-3: ${Math.round((max * 0.5) / 2.5) * 2.5} kg * 10`);
         }
     } else if (cycle === 2) {
         if (biggerPerc === true) {
-            console.log(`BBB Set 1-5: ${Math.round((max * 0.5) / 2.5) * 2.5} kg * 10`);
+            console.log(`BBB Set 1-3: ${Math.round((max * 0.5) / 2.5) * 2.5} kg * 10`);
         } else {
-            console.log(`BBB Set 1-5: ${Math.round((max * 0.4) / 2.5) * 2.5} kg * 10`);
+            console.log(`BBB Set 1-3: ${Math.round((max * 0.4) / 2.5) * 2.5} kg * 10`);
         }
     } else if (cycle === 3) {
         if (biggerPerc === true) {
-            console.log(`BBB Set 1-5: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 10`);
+            console.log(`BBB Set 1-3: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 10`);
         } else {
-            console.log(`BBB Set 1-5: ${Math.round((max * 0.6) / 2.5) * 2.5} kg * 10`);
+            console.log(`BBB Set 1-3: ${Math.round((max * 0.6) / 2.5) * 2.5} kg * 10`);
         }
     } else if (cycle === 4) {
         console.log(`PR Set: ${Math.round(max / 2.5) * 2.5} kg * 3-5`);
