@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Loops: Task 3</title>
     <style>
-        p {
-            color: purple;
-            margin: 0.5em 0;
-        }
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
 
-        * {
-            box-sizing: border-box;
-        }
+      * {
+        box-sizing: border-box;
+      }
     </style>
     <link rel="stylesheet" href="../styles.css" />
-</head>
+  </head>
 
-<body>
-
-    <section class="preview">
-
-
-
-    </section>
-
-</body>
-<script>
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
     /*     let i = 500;
         const para = document.createElement('p');
     
@@ -53,7 +46,7 @@
         const section = document.querySelector('section');
         section.appendChild(para); */
 
-/*     const removeFromArray = function (store, ...forDeletion) {
+    /*     const removeFromArray = function (store, ...forDeletion) {
         const arrayLength = store.length;
         for (const element of forDeletion) {
             for (let a = 0; a < arrayLength; a++) {
@@ -69,11 +62,11 @@
     console.log(nowa);
  */
 
-// leapYears takes parameter leapYear
-// condition to check - leapYear divisible by 4 and both 100 and 400
-// if true - returns true, else false
+    // leapYears takes parameter leapYear
+    // condition to check - leapYear divisible by 4 and both 100 and 400
+    // if true - returns true, else false
 
-/* const leapYears = function(leapYear) {
+    /* const leapYears = function(leapYear) {
     if (leapYear % 4 === 0) {
         return true;
     } else {
@@ -81,19 +74,16 @@
     }
 }; */
 
-/* const leapYears = function (leapYear) {
+    /* const leapYears = function (leapYear) {
     return (leapYear % 4 === 0 &&  (leapYear % 100 != 0 || leapYear % 400 === 0));
 } */
 
-const ftoc = function (fahTemp) {
-  return Math.round((fahTemp - 32) * (5/9) * 10) / 10;
-};
+    const ftoc = function (fahTemp) {
+      return Math.round((fahTemp - 32) * (5 / 9) * 10) / 10;
+    };
 
-const ctof = function (celTemp) {
-  return Math.round(((celTemp * 9/5) + 32) * 10) / 10;
-};
-
-
-</script>
-
+    const ctof = function (celTemp) {
+      return Math.round(((celTemp * 9) / 5 + 32) * 10) / 10;
+    };
+  </script>
 </html>

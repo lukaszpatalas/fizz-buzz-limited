@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Object basics: Task 3</title>
     <style>
       p {
@@ -17,16 +17,10 @@
   </head>
 
   <body>
-
-    <section class="preview">
-
-
-
-    </section>
-
+    <section class="preview"></section>
   </body>
   <script>
-/*     const cat = {
+    /*     const cat = {
       name : 'Bertie',
       breed : 'Cymric',
       color : 'white',
@@ -45,17 +39,15 @@
     } */
 
     function Cat(name, breed, color) {
-        this.name = name;
-        this.breed = breed;
-        this.color = color;
-        this.greeting = function() {
-            console.log(`Hello, said ${name} the ${breed}`);
-        }
+      this.name = name;
+      this.breed = breed;
+      this.color = color;
+      this.greeting = function () {
+        console.log(`Hello, said ${name} the ${breed}`);
+      };
     }
 
-    const cat = new Cat('Czoko', 'Ruboko', 'rudodyli');
+    const cat = new Cat("Czoko", "Ruboko", "rudodyli");
     cat.greeting();
-
   </script>
-
 </html>

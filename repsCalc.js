@@ -1,9 +1,14 @@
 function warmUpSets(fiveRepMax) {
-  console.log(`Warm up Set 1: ${Math.round((fiveRepMax * 0.4) / 2.5) * 2.5} kg * 5`);
-  console.log(`Warm up Set 2: ${Math.round((fiveRepMax * 0.5) / 2.5) * 2.5} kg * 5`);
-  console.log(`Warm up Set 3: ${Math.round((fiveRepMax * 0.6) / 2.5) * 2.5} kg * 3`);
+  console.log(
+    `Warm up Set 1: ${Math.round((fiveRepMax * 0.4) / 2.5) * 2.5} kg * 5`
+  );
+  console.log(
+    `Warm up Set 2: ${Math.round((fiveRepMax * 0.5) / 2.5) * 2.5} kg * 5`
+  );
+  console.log(
+    `Warm up Set 3: ${Math.round((fiveRepMax * 0.6) / 2.5) * 2.5} kg * 3`
+  );
 }
-
 function startTraining(max, cycle, program, bigPerc, widowmaker) {
   if (cycle >= 1 && cycle <= 5) {
     const fiveRep = max * 0.87;
@@ -39,7 +44,9 @@ function originalFirstHeavySets(max, cycle) {
   if (cycle === 1) {
     console.log(`Heavy Set 1: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 3`);
     console.log(`Heavy Set 2: ${Math.round((max * 0.8) / 2.5) * 2.5} kg * 3`);
-    console.log(`Heavy Set 3: ${Math.round((max * 0.9) / 2.5) * 2.5} kg * 3+ (PR Set)`);
+    console.log(
+      `Heavy Set 3: ${Math.round((max * 0.9) / 2.5) * 2.5} kg * 3+ (PR Set)`
+    );
   } else if (cycle === 2) {
     console.log(`Heavy Set 1: ${Math.round((max * 0.65) / 2.5) * 2.5} kg * 5`);
     console.log(`Heavy Set 2: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 5`);
@@ -47,7 +54,9 @@ function originalFirstHeavySets(max, cycle) {
   } else if (cycle === 3) {
     console.log(`Heavy Set 1: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 5`);
     console.log(`Heavy Set 2: ${Math.round((max * 0.85) / 2.5) * 2.5} kg * 3`);
-    console.log(`Heavy Set 3: ${Math.round((max * 0.95) / 2.5) * 2.5} kg * 1+ (PR Set)`);
+    console.log(
+      `Heavy Set 3: ${Math.round((max * 0.95) / 2.5) * 2.5} kg * 1+ (PR Set)`
+    );
   } else if (cycle === 4) {
     console.log(`Heavy Set 1: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 5`);
     console.log(`Heavy Set 2: ${Math.round((max * 0.8) / 2.5) * 2.5} kg * 3`);
@@ -113,11 +122,17 @@ function firstLastSets(max, cycle) {
 
 function widowmakerSets(max, cycle) {
   if (cycle === 1) {
-    console.log(`Widowmaker set: ${Math.round((max * 0.65) / 2.5) * 2.5} kg * 15-20`);
+    console.log(
+      `Widowmaker set: ${Math.round((max * 0.65) / 2.5) * 2.5} kg * 15-20`
+    );
   } else if (cycle === 2) {
-    console.log(`Widowmaker set: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 15-20`);
+    console.log(
+      `Widowmaker set: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 15-20`
+    );
   } else if (cycle === 3) {
-    console.log(`Widowmaker set: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 15-20`);
+    console.log(
+      `Widowmaker set: ${Math.round((max * 0.75) / 2.5) * 2.5} kg * 15-20`
+    );
   } else if (cycle === 4) {
     console.log(`PR Set: ${Math.round(max / 2.5) * 2.5} kg * 3-5`);
   } else if (cycle === 5) {
@@ -152,21 +167,33 @@ function sickSets(max) {
 function slightlyLessBoringSets(max, cycle, biggerPerc) {
   if (cycle === 1) {
     if (biggerPerc === true) {
-      console.log(`BBB Set 1-3: ${Math.round((max * 0.6) / 2.5) * 2.5} kg * 10`);
+      console.log(
+        `BBB Set 1-3: ${Math.round((max * 0.6) / 2.5) * 2.5} kg * 10`
+      );
     } else {
-      console.log(`BBB Set 1-3: ${Math.round((max * 0.5) / 2.5) * 2.5} kg * 10`);
+      console.log(
+        `BBB Set 1-3: ${Math.round((max * 0.5) / 2.5) * 2.5} kg * 10`
+      );
     }
   } else if (cycle === 2) {
     if (biggerPerc === true) {
-      console.log(`BBB Set 1-3: ${Math.round((max * 0.5) / 2.5) * 2.5} kg * 10`);
+      console.log(
+        `BBB Set 1-3: ${Math.round((max * 0.5) / 2.5) * 2.5} kg * 10`
+      );
     } else {
-      console.log(`BBB Set 1-3: ${Math.round((max * 0.4) / 2.5) * 2.5} kg * 10`);
+      console.log(
+        `BBB Set 1-3: ${Math.round((max * 0.4) / 2.5) * 2.5} kg * 10`
+      );
     }
   } else if (cycle === 3) {
     if (biggerPerc === true) {
-      console.log(`BBB Set 1-3: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 10`);
+      console.log(
+        `BBB Set 1-3: ${Math.round((max * 0.7) / 2.5) * 2.5} kg * 10`
+      );
     } else {
-      console.log(`BBB Set 1-3: ${Math.round((max * 0.6) / 2.5) * 2.5} kg * 10`);
+      console.log(
+        `BBB Set 1-3: ${Math.round((max * 0.6) / 2.5) * 2.5} kg * 10`
+      );
     }
   } else if (cycle === 4) {
     console.log(`PR Set: ${Math.round(max / 2.5) * 2.5} kg * 3-5`);

@@ -1,17 +1,17 @@
 let hamster = {
-    eat(food) {
-        this.stomach.push(food);
-    }
+  eat(food) {
+    this.stomach.push(food);
+  },
 };
 
 let speedy = {
-    stomach: [],
-    __proto__: hamster
+  stomach: [],
+  __proto__: hamster,
 };
 
 let lazy = {
-    stomach: [],
-    __proto__: hamster
+  stomach: [],
+  __proto__: hamster,
 };
 
 // This one found the food
