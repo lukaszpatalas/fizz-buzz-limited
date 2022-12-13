@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Define the styles for the game */
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      .game {
+        margin: auto;
+        width: 200px;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      .shape {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .rock {
+        background-color: #a3a3a3;
+      }
+      .paper {
+        background-color: #fff;
+      }
+      .scissors {
+        background-color: #f44336;
+      }
+      .result {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="game">
+      <h1>Rock, Paper, Scissors</h1>
+
+      <!-- Define the shapes that can be thrown in the game -->
+      <div class="shape rock" onclick="play('rock')"></div>
+      <div class="shape paper" onclick="play('paper')"></div>
+      <div class="shape scissors" onclick="play('scissors')"></div>
+
+      <!-- Define an element to display the result of the game -->
+      <div class="result"></div>
+    </div>
+
+    <script>
+      // Define the possible shapes that can be thrown in the game
+      const shapes = ["rock", "paper", "scissors"];
+
+      // Define the function to play the game
+      function play(playerShape) {
+        // Generate a random shape for the computer
+        const computerShape = shapes[Math.floor(Math.random() * shapes.length)];
+
+        // Compare the player's shape to the computer's shape to determine the winner
+        if (playerShape == computerShape) {
+          document.querySelector(".result").innerHTML = "It's a tie!";
+        } else if (
+          (playerShape == "rock" && computerShape == "scissors") ||
+          (playerShape == "scissors" && computerShape == "paper") ||
+          (playerShape == "paper" && computerShape == "rock")
+        ) {
+          document.querySelector(".result").innerHTML = "You win!";
+        } else {
+          document.querySelector(".result").innerHTML = "The computer wins.";
+        }
+      }
+    </script>
+  </body>
+</html>
