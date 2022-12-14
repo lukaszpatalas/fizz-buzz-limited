@@ -6,18 +6,24 @@
   </head>
   <body>
     <img src="#" />
+    <button>Click Me</button>
     <script>
       const img = document.querySelector("img");
-      fetch(
-        "https://api.giphy.com/v1/gifs/translate?api_key=GK40zkBxvsGQ5U7LMF2W5w7NxLWRCRi4&s=cats",
-        { mode: "cors" }
-      )
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (response) {
-          img.src = response.data.images.original.url;
-        });
+      const button = document.querySelector("button");
+      button.addEventListener("click", fetchData);
+      function fetchData() {
+        fetch(
+          "https://api.giphy.com/v1/gifs/translate?api_key=GK40zkBxvsGQ5U7LMF2W5w7NxLWRCRi4&s=cats",
+          { mode: "cors" }
+        )
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (response) {
+            img.src = response.data.images.original.url;
+          });
+      }
+      fetchData();
     </script>
   </body>
 </html>
