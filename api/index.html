@@ -7,13 +7,35 @@
   <body>
     <img src="#" />
     <button>Click Me</button>
+    <form id="form">
+      <input
+        type="search"
+        id="query"
+        name="q"
+        placeholder="Search for gifs..."
+      />
+      <button>Search</button>
+    </form>
     <script>
       const img = document.querySelector("img");
       const button = document.querySelector("button");
       button.addEventListener("click", fetchData);
+      const f = document.getElementById("form");
+      const q = document.getElementById("query");
+
       function fetchData() {
+        fetchs("dogs");
+      }
+
+      function submitted(event) {
+        event.preventDefault();
+        const answer = document.querySelector("input").value;
+        fetchs(answer);
+      }
+
+      function fetchs(fetchedItem) {
         fetch(
-          "https://api.giphy.com/v1/gifs/translate?api_key=GK40zkBxvsGQ5U7LMF2W5w7NxLWRCRi4&s=cats",
+          `https://api.giphy.com/v1/gifs/translate?api_key=GK40zkBxvsGQ5U7LMF2W5w7NxLWRCRi4&s=${fetchedItem}`,
           { mode: "cors" }
         )
           .then(function (response) {
@@ -23,6 +45,8 @@
             img.src = response.data.images.original.url;
           });
       }
+
+      f.addEventListener("submit", submitted);
       fetchData();
     </script>
   </body>
