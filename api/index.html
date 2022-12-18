@@ -6,48 +6,19 @@
   </head>
   <body>
     <img src="#" />
-    <button>Click Me</button>
-    <form id="form">
-      <input
-        type="search"
-        id="query"
-        name="q"
-        placeholder="Search for gifs..."
-      />
-      <button>Search</button>
-    </form>
     <script>
-      const img = document.querySelector("img");
-      const button = document.querySelector("button");
-      button.addEventListener("click", fetchData);
-      const f = document.getElementById("form");
-      const q = document.getElementById("query");
-
-      function fetchData() {
-        fetchs("dogs");
+      async function wait() {
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        return 10;
       }
 
-      function submitted(event) {
-        event.preventDefault();
-        const answer = document.querySelector("input").value;
-        fetchs(answer);
+      function f() {
+        // ...what should you write here?
+        // we need to call async wait() and wait to get 10
+        // remember, we can't use "await"
+        wait().then(result => alert(result));
       }
-
-      function fetchs(fetchedItem) {
-        fetch(
-          `https://api.giphy.com/v1/gifs/translate?api_key=GK40zkBxvsGQ5U7LMF2W5w7NxLWRCRi4&s=${fetchedItem}`,
-          { mode: "cors" }
-        )
-          .then(function (response) {
-            return response.json();
-          })
-          .then(function (response) {
-            img.src = response.data.images.original.url;
-          });
-      }
-
-      f.addEventListener("submit", submitted);
-      fetchData();
+      f();
     </script>
   </body>
 </html>
