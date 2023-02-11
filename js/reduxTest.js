@@ -1,45 +1,28 @@
 import React from 'react';
-import { createStore } from 'redux';
+import { configureStore, createSlice } from '@reduxjs/toolkit';
 import { Provider, useSelector, useDispatch } from 'react-redux';
 
-// action types
-const ADD_TODO = 'ADD_TODO';
-const TOGGLE_TODO = 'TOGGLE_TODO';
+// createSlice
+const todoSlice = createSlice({
+  name: 'todos',
+  initialState: [],
+  reducers: {
+    addTodo: (state, action) => {
+      state.push({ text: action.payload, completed: false });
+    },
+    toggleTodo: (state, action) => {
+      state[action.payload].completed = !state[action.payload].completed;
+    }
+  }
+});
 
 // action creators
-function addTodo(text) {
-  return { type: ADD_TODO, text };
-}
-
-function toggleTodo(index) {
-  return { type: TOGGLE_TODO, index };
-}
-
-// reducer
-function todos(state = [], action) {
-  switch (action.type) {
-    case ADD_TODO:
-      return [
-        ...state,
-        {
-          text: action.text,
-          completed: false
-        }
-      ];
-    case TOGGLE_TODO:
-      return state.map((todo, index) => {
-        if (index === action.index) {
-          return { ...todo, completed: !todo.completed };
-        }
-        return todo;
-      });
-    default:
-      return state;
-  }
-}
+const { addTodo, toggleTodo } = todoSlice.actions;
 
 // store
-const store = createStore(todos);
+const store = configureStore({
+  reducer: todoSlice.reducer
+});
 
 // React component
 function TodoList() {
@@ -56,11 +39,13 @@ function TodoList() {
 
   return (
     <div>
-      <form onSubmit={e => {
-        e.preventDefault();
-        handleAddTodo(e.target.todo.value);
-        e.target.todo.value = '';
-      }}>
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+          handleAddTodo(e.target.todo.value);
+          e.target.todo.value = '';
+        }}
+      >
         <input type="text" name="todo" />
         <button type="submit">Add Todo</button>
       </form>
@@ -76,5 +61,13 @@ function TodoList() {
         ))}
       </ul>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Provider store={store}>
+      <TodoList />
+    </Provider>
   );
 }
