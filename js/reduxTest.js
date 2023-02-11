@@ -1,4 +1,6 @@
-// I have used action types both in variables and directly in action creators, to reduce chances of typos
+import React from 'react';
+import { createStore } from 'redux';
+import { Provider, useSelector, useDispatch } from 'react-redux';
 
 // action types
 const ADD_TODO = 'ADD_TODO';
@@ -37,13 +39,9 @@ function todos(state = [], action) {
 }
 
 // store
-import { createStore } from 'redux';
 const store = createStore(todos);
 
 // React component
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-
 function TodoList() {
   const todos = useSelector(state => state);
   const dispatch = useDispatch();
